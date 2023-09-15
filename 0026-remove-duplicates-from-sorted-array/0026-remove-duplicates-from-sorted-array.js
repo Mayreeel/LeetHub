@@ -3,15 +3,13 @@
  * @return {number}
  */
 var removeDuplicates = function(nums) {
-    let nonDuplicates = [];
+    let insertIndex = 1;
     
-    for (let i = 0;i<nums.length;i++){
-        if(nonDuplicates.filter(x=>x === nums[i]).length === 0){
-            nonDuplicates.push(nums[i]);
-        } else {
-            nums.splice(i,1)
-            i--
+    for (let i = 1;i<nums.length;i++){
+        if(nums[i - 1] != nums[i]){
+            nums[insertIndex] = nums[i];  
+            insertIndex++; 
         }
     }
-    return nonDuplicates.length;
+    return insertIndex;
 };
