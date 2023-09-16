@@ -9,8 +9,6 @@ var rotate = function(nums, k) {
     for(let i = 0;i<nums.length-k;i++){
         nums[k+i] = arr[i];
     }
-    console.log(arr)
-    console.log(nums)
     for(let i = 0;i<k;i++){
         nums[i] = arr[arr.length-k+i]
     }
