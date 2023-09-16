@@ -17,7 +17,6 @@ var majorityElement = function(nums) {
         if (count >= Math.floor(nums.length / 2)) {
             return nums[i];
         }
-        console.log(nums[i] + " ");
     }
     return 0;
 };
