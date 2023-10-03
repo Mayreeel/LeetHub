@@ -6,7 +6,7 @@ var maxArea = function(height) {
     const n = height.length
     let left = 0
     let right = n-1
-    let ans = Number.MIN_SAFE_INTEGER
+    let ans = 0
 
     while(left < right){
     let area=0
